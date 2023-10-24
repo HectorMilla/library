@@ -1,5 +1,7 @@
 const bookList = document.getElementById("books");
 const newBookButton = document.getElementById("addBook");
+const bookForm = document.querySelector("#bookForm");
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -19,7 +21,14 @@ let addBookToLibrary = () => {
   });
 };
 
-newBookButton.addEventListener("click", () => {});
+newBookButton.addEventListener("click", () => {
+  bookForm.style.display = "block";
+});
+//prevent form submit default and remove form from screen
+document.getElementById("submit").addEventListener("click", function (event) {
+  event.preventDefault();
+  bookForm.style.display = "none";
+});
 addBookToLibrary();
 // let theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "read");
 // console.log(theHobbit.info());
