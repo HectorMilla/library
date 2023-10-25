@@ -1,4 +1,47 @@
+body {
+  margin: 0;
+  background-color: rgb(233, 234, 234);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 600px;
+  width: 100%;
+}
+.title {
+  text-align: center;
+}
+#books {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.book {
+  height: 200px;
+  width: 200px;
+  box-shadow: 1px 1px 1px 1px grey;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 #bookForm {
   display: none;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+#addBook {
   color: red;
+  margin: auto;
+}
+.read {
+  background-color: green;
+}
+
+div .content {
+  color: green;
 }
